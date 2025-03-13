@@ -26,7 +26,7 @@ export default function Index() {
         <div className="bg-white w-[248px] h-[60px] flex justify-center">
             <h1 className="text-black p-1">A Software Craftsman, at <br/>your service</h1>
         </div>
-        <div className="">
+        <div className="bg-gradient-to-b from-black to-[#FAFAFA]">
           <img src="/anime-coder-girl.png" alt="Resource Icon"/>
         </div>
       </div>
@@ -79,8 +79,8 @@ export default function Index() {
         </div>
       </div>
       <div>
-        <div id={'contact'} className="bg-[#FAFAFA] py-8 flex justify-center bg-black">
-            <div className="w-[300px] flex flex-col items-center gap-4 p-6 rounded">
+        <div id={'contact'} className="py-8 flex justify-center bg-gradient-to-b from-[#6D14FF] to-black">
+            <div className="border border-white w-[300px] flex flex-col items-center gap-4 p-6">
             <h3 className="text-xl font-bold text-white">Contact Me</h3>
             <form className="w-full flex flex-col items-center gap-4">
               <input 
