@@ -11,6 +11,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ resources }) => {
   const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isWiderScreen = useMediaQuery({ minWidth: 1360 });
 
   return isDesktop ? (
     <div className="relative w-full flex justify-center">
@@ -70,9 +71,17 @@ const Hero: React.FC<HeroProps> = ({ resources }) => {
               <React.Fragment key={index}>{resource.icon}</React.Fragment>
             ))}
           </div>
-          <div className="bg-black max-w-[500px] overflow-hidden">
+          <div className="bg-black max-w-[500px] opacity-0">
             <img src="/anime-coder-girl.png" alt="Resource Icon" />
           </div>
+        </div>
+
+        <div className="bg-black max-w-[500px] h-full absolute right-0 top-0">
+          <img
+            src="/anime-coder-girl.png"
+            alt="Resource Icon"
+            className="h-full object-cover"
+          />
         </div>
       </div>
     </div>

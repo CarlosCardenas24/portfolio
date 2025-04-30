@@ -8,6 +8,7 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 import Footer from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
+import { useMediaQuery } from "react-responsive";
 
 import "./tailwind.css";
 
@@ -25,6 +26,7 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const isMobile = useMediaQuery({ maxWidth: 750 });
   return (
     <html lang="en">
       <head>
@@ -34,15 +36,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="bg-black">
-        <NavigationBar/>
+        <NavigationBar />
         {children}
         <Footer />
-        <div className="flex justify-center mt-4">
-          <img 
-            src="/pretty-anime-girl-saying-goodbye.png" 
-            alt="Anime coder girl" 
-          />
-        </div>
+        {isMobile ? (
+          <div className="flex justify-center mt-4">
+            <img
+              src="/pretty-anime-girl-saying-goodbye.png"
+              alt="Anime coder girl"
+            />
+          </div>
+        ) : null}
         <ScrollRestoration />
         <Scripts />
       </body>

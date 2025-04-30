@@ -21,7 +21,7 @@ export default function Index() {
   return (
     <div>
       {isDesktop && (
-        <div className="fixed top-0 bottom-0 bg-white w-[2px] h-full ml-20 z-50"></div>
+        <div className="fixed top-0 bottom-0 bg-[#FAFAFA] w-[2px] h-full ml-20 z-50"></div>
       )}
       <Hero resources={resources} />
       <Introduction paragraph={paragraph} />

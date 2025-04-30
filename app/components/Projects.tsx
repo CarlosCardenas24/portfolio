@@ -38,7 +38,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               <div className="col-start-5 col-span-2 row-start-1 flex justify-center items-center">
                 <a
                   href="#"
-                  className="text-[25px] hover:underline whitespace-nowrap p-[20px] block"
+                  className="text-[20px] hover:underline whitespace-nowrap p-[20px] block font-light"
                 >
                   Shopify Theme App Extension
                 </a>
@@ -46,7 +46,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               <div className="col-start-1 row-start-3 flex items-center justify-center -rotate-90">
                 <a
                   href="#"
-                  className="text-[25px] hover:underline p-[20px] whitespace-nowrap block"
+                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light"
                 >
                   Landing Page
                 </a>
@@ -54,19 +54,19 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
 
               <div className="col-start-2 col-span-8 row-start-2 row-span-3 relative overflow-hidden w-full">
                 <img
-                  src="/leopard-bg.png"
+                  src="/leopard-bg-rotated.png"
                   alt="Leopard Background"
-                  className="absolute insert-0 w-full h-full max-w-270 max-h-778 object-fill transform rotate-90"
+                  className="absolute insert-0 w-full h-full max-w-270 max-h-778 object-fill"
                 />
               </div>
 
               <div className="col-start-5 col-span-2 row-start-2 row-span-3 absolute inset-0 flex items-center justify-center">
-                <h3 className="text-[55px] text-white z-10">Projects</h3>
+                <h3 className="text-[100px] text-white z-10">Projects</h3>
               </div>
               <div className="col-start-10 row-start-3 flex items-center justify-center rotate-90">
                 <a
                   href="#"
-                  className="text-[25px] hover:underline p-[20px] whitespace-nowrap block"
+                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light"
                 >
                   Shopping Cart
                 </a>
@@ -74,7 +74,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               <div className="col-start-5 col-span-2 row-start-5 flex justify-center items-center">
                 <a
                   href="#"
-                  className="text-[25px] hover:underline p-[20px] whitespace-nowrap block"
+                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light"
                 >
                   AI Image Diffusion / Story Board
                 </a>
@@ -106,39 +106,44 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
         <p className="text-[18px] text-white w-[248px]">{recommendation}</p>
       </div>
       <div className="pb-2">
-        <div className="bg-[url('/leopard-bg.png')] bg-contain bg-center bg-no-repeat flex flec-column items-center justify-center w-[80%] h-[450px] mx-auto my-20">
+        <div
+          className="bg-[url('/leopard-bg.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center w-[80%] h-[650px] mx-auto my-20
+        "
+        >
           <h3 className="text-[55px]">Projects</h3>
-          <div>
-            <a
-              href="#"
-              className="text-[20px] hover:underline p-[20px] inline-block"
-            >
-              Shopify Theme App Extension
-            </a>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-[20px] hover:underline p-[20px] inline-block"
-            >
-              Landing Page
-            </a>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-[20px] hover:underline p-[20px] inline-block"
-            >
-              AI Image Diffusion / Story Board
-            </a>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-[20px] hover:underline p-[20px] inline-block"
-            >
-              Shopping Cart
-            </a>
+          <div className="flex flex-col justify-between h-[80%] w-full">
+            <div className="text-center">
+              <a
+                href="#"
+                className="text-[20px] hover:underline p-[20px] inline-block"
+              >
+                Shopify Theme App Extension
+              </a>
+            </div>
+            <div className="text-center">
+              <a
+                href="#"
+                className="text-[20px] hover:underline p-[20px] inline-block"
+              >
+                Landing Page
+              </a>
+            </div>
+            <div className="text-center">
+              <a
+                href="#"
+                className="text-[20px] hover:underline p-[20px] inline-block"
+              >
+                AI Image Diffusion / Story Board
+              </a>
+            </div>
+            <div className="text-center">
+              <a
+                href="#"
+                className="text-[20px] hover:underline p-[20px] inline-block"
+              >
+                Shopping Cart
+              </a>
+            </div>
           </div>
         </div>
       </div>
