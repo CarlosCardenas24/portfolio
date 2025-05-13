@@ -9,10 +9,14 @@ export default function Footer() {
         <div className="flex flex-row justify-between">
           <div className="w-1/2 flex flex-row">
             <div className="w-1/3 pr-8">
-              <h3 className="text-xl font-bold text-white">Connect:</h3>
+              <h3 className="text-xl font-bold text-white roboto-mono">
+                Connect:
+              </h3>
             </div>
             <div className="w-1/3">
-              <h3 className="text-xl font-bold text-white">Projects</h3>
+              <h3 className="text-xl font-bold text-white roboto-mono">
+                Projects:
+              </h3>
             </div>
           </div>
           <div className="w-1/2"></div>
@@ -24,25 +28,25 @@ export default function Footer() {
             <div className="w-1/3 pr-8">
               <div className="flex flex-col space-y-4 mt-3 mb-6">
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/carlos-cardenas-developer/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   LinkedIn
                 </a>
                 <a
                   href="/resume.pdf"
                   target="_blank"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   Resume
                 </a>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/CarlosCardenas24"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   GitHub
                 </a>
@@ -51,29 +55,29 @@ export default function Footer() {
             <div className="w-1/2">
               <div className="flex flex-col space-y-4 mt-3 mb-6">
                 <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  href="https://apps.shopify.com/wishify"
+                  className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   Shopify Theme App Extension
                 </a>
                 <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  href="https://ccwebarch.com/"
+                  className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   Landing Page
                 </a>
                 <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  AI Image Diffusion / Story Board
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  href="https://shopping-cart-poc-app.netlify.app/"
+                  className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   Shopping Cart
                 </a>
+                {/* <a
+                  href="#"
+                  className="text-gray-300 hover:text-white transition-colors roboto-mono"
+                >
+                  AI Image Diffusion / Story Board
+                </a> */}
               </div>
             </div>
           </div>
@@ -86,7 +90,7 @@ export default function Footer() {
                   className="h-24 w-auto"
                 />
               </div>
-              <p className="text-gray-400 text-center">
+              <p className="text-gray-400 text-center roboto-mono">
                 © {new Date().getFullYear()} All rights reserved
               </p>
             </div>
@@ -98,67 +102,67 @@ export default function Footer() {
     <footer className="py-6 mt-12 border-t border-gray-800">
       <div className="container mx-auto px-4">
         <div>
-          <h3 className="text-xl font-bold text-white">Connect:</h3>
+          <h3 className="text-xl font-bold text-white roboto-mono">Connect:</h3>
           <div className="flex flex-col space-y-4 mt-3 mb-6">
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/carlos-cardenas-developer/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors roboto-mono"
             >
               LinkedIn
             </a>
             <a
               href="/resume.pdf"
               target="_blank"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors roboto-mono"
             >
               Resume
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/CarlosCardenas24"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors roboto-mono"
             >
               GitHub
             </a>
           </div>
         </div>
         <div>
-          <h3 className="text-xl font-bold text-white">Projects</h3>
+          <h3 className="text-xl font-bold text-white roboto-mono">Projects</h3>
           <div className="flex flex-col space-y-4 mt-3 mb-6">
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://apps.shopify.com/wishify"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors roboto-mono"
             >
               Shoppify Theme App Extension
             </a>
             <a
-              href="/resume.pdf"
+              href="https://ccwebarch.com/"
               target="_blank"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors roboto-mono"
             >
               Landing Page
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://shopping-cart-poc-app.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              AI Image Diffusion / Story Board
-            </a>
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors roboto-mono"
             >
               Shopping Cart
             </a>
+            {/* <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors roboto-mono"
+            >
+              AI Image Diffusion / Story Board
+            </a> */}
           </div>
         </div>
         <div>
@@ -166,7 +170,7 @@ export default function Footer() {
             <img src="/logo-carlos.png" alt="Logo" className="h-16 w-auto" />
           </div>
         </div>
-        <p className="text-gray-400 text-center">
+        <p className="text-gray-400 text-center roboto-mono">
           © {new Date().getFullYear()} All rights reserved
         </p>
       </div>

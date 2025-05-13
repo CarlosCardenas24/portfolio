@@ -12,26 +12,26 @@ const NavigationBar: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-center">
         <div className="flex space-x-6">
           <a
-            href="#"
-            className="text-gray-300 hover:text-[#6D14FF] transition-colors"
+            href="#projects"
+            className="text-gray-300 hover:text-[#6D14FF] transition-colors roboto-mono"
           >
             Projects
           </a>
           <a
-            href="#"
-            className="text-gray-300 hover:text-[#6D14FF] transition-colors"
+            href="https://www.linkedin.com/in/carlos-cardenas-developer/"
+            className="text-gray-300 hover:text-[#6D14FF] transition-colors roboto-mono"
           >
             LinkedIn
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:text-[#6D14FF] transition-colors"
+            className="text-gray-300 hover:text-[#6D14FF] transition-colors roboto-mono"
           >
             Resume
           </a>
           <a
-            href="#"
-            className="text-gray-300 hover:text-[#6D14FF] transition-colors"
+            href="https://github.com/CarlosCardenas24"
+            className="text-gray-300 hover:text-[#6D14FF] transition-colors roboto-mono"
           >
             GitHub
           </a>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+3D&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,6 +13,12 @@ body {
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateX(10px);
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
 @layer components {
   .swiper-custom-pagination .swiper-pagination-bullet {
     background-color: #6d14ff;
@@ -21,4 +29,16 @@ body {
     background-color: #6d14ff;
     opacity: 1;
   }
+}
+
+.rock-3d-regular {
+  font-family: "Rock 3D", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
 }

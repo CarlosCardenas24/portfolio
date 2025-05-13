@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 interface Resource {
@@ -11,7 +11,14 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ resources }) => {
   const isDesktop = useMediaQuery({ minWidth: 750 });
-  const isWiderScreen = useMediaQuery({ minWidth: 1360 });
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setImageLoaded(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return isDesktop ? (
     <div className="relative w-full flex justify-center">
@@ -24,43 +31,43 @@ const Hero: React.FC<HeroProps> = ({ resources }) => {
         >
           <div className="flex flex-col items-start justify-between gap-7 pl-5">
             <div>
-              <h1 className="text-white text-xl font-bold mt-8">
+              <h1 className="text-white text-xl font-bold mt-8 roboto-mono">
                 Carlos <br /> Cardenas
               </h1>
             </div>
             <div className="bg-white w-[248px] h-[60px] flex justify-center">
-              <h1 className="text-black p-1">
+              <h1 className="text-black p-1 roboto-mono">
                 A Software Craftsman, at <br />
                 your service
               </h1>
             </div>
             <div className="flex flex-col space-y-8">
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/carlos-cardenas-developer/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#6D14FF] transition-colors text-xl"
+                className="text-gray-300 hover:text-[#6D14FF] transition-colors text-xl roboto-mono"
               >
                 LinkedIn
               </a>
               <a
                 href="/resume.pdf"
                 target="_blank"
-                className="text-gray-300 hover:text-[#6D14FF] transition-colors text-xl"
+                className="text-gray-300 hover:text-[#6D14FF] transition-colors text-xl roboto-mono"
               >
                 Resume
               </a>
               <a
-                href="https://github.com/your-username"
+                href="https://github.com/CarlosCardenas24"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#6D14FF] transition-colors text-xl"
+                className="text-gray-300 hover:text-[#6D14FF] transition-colors text-xl roboto-mono"
               >
                 GitHub
               </a>
               <a
                 href="#projects"
-                className="text-gray-300 hover:text-[#6D14FF] transition-colors text-xl"
+                className="text-gray-300 hover:text-[#6D14FF] transition-colors text-xl roboto-mono"
               >
                 Projects
               </a>
@@ -76,7 +83,13 @@ const Hero: React.FC<HeroProps> = ({ resources }) => {
           </div>
         </div>
 
-        <div className="bg-black max-w-[500px] h-full absolute right-0 top-0">
+        <div
+          className={`max-w-[500px] h-full absolute right-0 top-0 transition-all duration-1000 ease-in-out ${
+            imageLoaded
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-10"
+          }`}
+        >
           <img
             src="/anime-coder-girl.png"
             alt="Resource Icon"
@@ -96,7 +109,7 @@ const Hero: React.FC<HeroProps> = ({ resources }) => {
         ))}
       </div>
       <div className="bg-white w-[248px] h-[60px] flex justify-center">
-        <h1 className="text-black p-1">
+        <h1 className="text-black p-1 roboto-mono">
           A Software Craftsman, at <br />
           your service
         </h1>

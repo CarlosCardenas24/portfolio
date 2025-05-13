@@ -11,7 +11,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
   return isDesktop ? (
     <div
       id={"projects"}
-      className="bg-[#6D14FF] flex flex-col relative pl-[5.5rem]"
+      className="bg-[#6D14FF] flex flex-col relative pl-[80px]"
     >
       <div className="w-full flex justify-center">
         <div className="max-w-7xl w-full">
@@ -27,7 +27,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               <div className="flex flex-col justify-center gap-1"></div>
             </div>
             <div className="max-w-md">
-              <p className="text-[18px] text-white max-w-md">
+              <p className="text-[18px] text-white max-w-md roboto-mono">
                 {recommendation}
               </p>
             </div>
@@ -37,16 +37,16 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
             <div className="grid grid-cols-10 grid-rows-5 w-[80%] h-[450px] mx-auto relative">
               <div className="col-start-5 col-span-2 row-start-1 flex justify-center items-center">
                 <a
-                  href="#"
-                  className="text-[20px] hover:underline whitespace-nowrap p-[20px] block font-light"
+                  href="https://apps.shopify.com/wishify"
+                  className="text-[20px] hover:underline whitespace-nowrap p-[20px] block font-light roboto-mono"
                 >
                   Shopify Theme App Extension
                 </a>
               </div>
               <div className="col-start-1 row-start-3 flex items-center justify-center -rotate-90">
                 <a
-                  href="#"
-                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light"
+                  href="https://ccwebarch.com/"
+                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
                 >
                   Landing Page
                 </a>
@@ -61,24 +61,26 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               </div>
 
               <div className="col-start-5 col-span-2 row-start-2 row-span-3 absolute inset-0 flex items-center justify-center">
-                <h3 className="text-[100px] text-white z-10">Projects</h3>
+                <h3 className="text-[100px] text-white z-10 rock-3d-regular">
+                  Projects
+                </h3>
               </div>
               <div className="col-start-10 row-start-3 flex items-center justify-center rotate-90">
                 <a
-                  href="#"
-                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light"
+                  href="https://shopping-cart-poc-app.netlify.app/"
+                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
                 >
                   Shopping Cart
                 </a>
               </div>
-              <div className="col-start-5 col-span-2 row-start-5 flex justify-center items-center">
+              {/* <div className="col-start-5 col-span-2 row-start-5 flex justify-center items-center">
                 <a
                   href="#"
-                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light"
+                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
                 >
                   AI Image Diffusion / Story Board
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -98,52 +100,54 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
           />
         </div>
         <div className="flex flex-col justify-center gap-1">
-          <span className="text-white">Carlos Cardenas</span>
-          <span className="text-white">Software Developer</span>
+          <span className="text-white roboto-mono">Carlos Cardenas</span>
+          <span className="text-white roboto-mono">Software Developer</span>
         </div>
       </div>
       <div className="pb-2">
-        <p className="text-[18px] text-white w-[248px]">{recommendation}</p>
+        <p className="text-[18px] text-white w-[248px] roboto-mono">
+          {recommendation}
+        </p>
       </div>
       <div className="pb-2">
         <div
           className="bg-[url('/leopard-bg.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center w-[80%] h-[650px] mx-auto my-20
         "
         >
-          <h3 className="text-[55px]">Projects</h3>
+          <h3 className="text-[55px] rock-3d-regular">Projects</h3>
           <div className="flex flex-col justify-between h-[80%] w-full">
             <div className="text-center">
               <a
-                href="#"
-                className="text-[20px] hover:underline p-[20px] inline-block"
+                href="https://apps.shopify.com/wishify"
+                className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
               >
                 Shopify Theme App Extension
               </a>
             </div>
             <div className="text-center">
               <a
-                href="#"
-                className="text-[20px] hover:underline p-[20px] inline-block"
+                href="https://ccwebarch.com/"
+                className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
               >
                 Landing Page
               </a>
             </div>
             <div className="text-center">
               <a
-                href="#"
-                className="text-[20px] hover:underline p-[20px] inline-block"
-              >
-                AI Image Diffusion / Story Board
-              </a>
-            </div>
-            <div className="text-center">
-              <a
-                href="#"
-                className="text-[20px] hover:underline p-[20px] inline-block"
+                href="https://shopping-cart-poc-app.netlify.app/"
+                className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
               >
                 Shopping Cart
               </a>
             </div>
+            {/* <div className="text-center">
+              <a
+                href="#"
+                className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
+              >
+                AI Image Diffusion / Story Board
+              </a>
+            </div> */}
           </div>
         </div>
       </div>

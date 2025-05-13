@@ -18,11 +18,13 @@ const Introduction: React.FC<IntroductionProps> = ({ paragraph }) => {
           <div className="flex flex-row w-full pl-[5.5rem] ">
             <div className="bg-[#FAFAFA] flex flex-col justify-center h-full py-8 px-12 w-3/5">
               <div className="flex flex-col gap-4 w-full">
-                <h2 className="text-xl font-bold text-[20px] text-black w-full">
+                <h2 className="text-xl font-bold text-[20px] text-black w-full roboto-mono">
                   Engineering solutions <br />
                   for the digital frontier.
                 </h2>
-                <p className="text-[15px] text-black w-full">{paragraph}</p>
+                <p className="text-[15px] text-black w-full roboto-mono">
+                  {paragraph}
+                </p>
               </div>
             </div>
             <div className="bg-[#FAFAFA] flex flex-row gap-4 w-2/3 justify-end items-center px-8 py-8">
@@ -62,17 +64,20 @@ const Introduction: React.FC<IntroductionProps> = ({ paragraph }) => {
   ) : (
     <div id={"introduction"} className="bg-white">
       <div className="bg-[#FAFAFA] flex flex-col items-center pt-1 pb-1 gap-4">
-        <h2 className="text-xl font-bold text-[20px] text-black w-[248px]">
+        <h2 className="text-xl font-bold text-[20px] text-black w-[248px] roboto-mono">
           Engineering solutions <br />
           for the digital frontier.
         </h2>
-        <p className="text-[15px] text-black w-[248px]">{paragraph}</p>
+        <p className="text-[15px] text-black w-[248px] roboto-mono">
+          {paragraph}
+        </p>
       </div>
       <div className="bg-[#FAFAFA] flex flex-col justify-center pt-4 pb-4">
         <Swiper
           spaceBetween={10}
           slidesPerView={1.2}
           centeredSlides={true}
+          rewind={true}
           pagination={{
             clickable: true,
             bulletActiveClass: "swiper-pagination-bullet-active bg-[#6D14FF]",

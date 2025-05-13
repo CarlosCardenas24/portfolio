@@ -1,19 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const ContactForm: React.FC = () => {
   const isDesktop = useMediaQuery({ minWidth: 750 });
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [result, setResult] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setImageLoaded(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "a9961675-7df4-44f1-bd4e-d8e9f2ec46f6");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
 
   return isDesktop ? (
     <div
       id={"contact"}
-      className="py-12 flex justify-center bg-gradient-to-b from-[#6D14FF] to-black"
+      className="py-12 flex justify-center bg-gradient-to-b from-[#6D14FF] to-black pl-[80px]"
     >
-      <div className="container max-w-7xl mx-auto flex flex-row items-center pl-[5.5rem]">
+      <div className="container max-w-7xl mx-auto flex flex-row items-center justify-center">
         <div className="w-1/2 pr-8">
           <div className="border border-white max-w-xl p-10">
             <h3 className="text-3xl font-bold text-white mb-8">Contact Me</h3>
-            <form className="w-full flex flex-col gap-6">
+
+            <form onSubmit={onSubmit} className="w-full flex flex-col gap-6">
               <input
                 type="text"
                 name="name"
@@ -37,20 +70,27 @@ const ContactForm: React.FC = () => {
               ></textarea>
               <button
                 type="submit"
-                className="bg-[#6D14FF] text-white py-3 px-6 rounded hover:bg-purple-700 transition"
+                className="bg-[#6D14FF] text-white py-3 px-6 rounded hover:bg-purple-700 transition motion-safe:animate-pulse"
               >
                 Send Message
               </button>
             </form>
+            <span className="text-[15px] roboto-mono">{result}</span>
           </div>
         </div>
-        <div className="w-1/2 h-full flex items-center justify-center">
-          <img
-            src="/pretty-anime-girl-saying-goodbye.png"
-            alt="Anime Girl Waving Goodbye"
-            className="h-full object-contain"
-          />
-        </div>
+      </div>
+
+      <div
+        className={`max-w-[500px] max-h-[600px] absolute right-0 
+        transition-all duration-1000 ease-in-out ${
+          imageLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+        }`}
+      >
+        <img
+          src="/pretty-anime-girl-saying-goodbye.png"
+          alt="Anime Girl Waving Goodbye"
+          className="h-full object-cover"
+        />
       </div>
     </div>
   ) : (
@@ -60,7 +100,10 @@ const ContactForm: React.FC = () => {
     >
       <div className="border border-white w-[300px] flex flex-col items-center gap-4 p-6">
         <h3 className="text-xl font-bold text-white">Contact Me</h3>
-        <form className="w-full flex flex-col items-center gap-4">
+        <form
+          onSubmit={onSubmit}
+          className="w-full flex flex-col items-center gap-4"
+        >
           <input
             type="text"
             name="name"
@@ -89,6 +132,7 @@ const ContactForm: React.FC = () => {
             Send Message
           </button>
         </form>
+        <span className="text-[15px] roboto-mono">{result}</span>
       </div>
     </div>
   );
