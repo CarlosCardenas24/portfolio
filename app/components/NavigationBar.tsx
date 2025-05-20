@@ -19,18 +19,21 @@ const NavigationBar: React.FC = () => {
           </a>
           <a
             href="https://www.linkedin.com/in/carlos-cardenas-developer/"
+            target="_blank"
             className="text-gray-300 hover:text-[#6D14FF] transition-colors roboto-mono"
           >
             LinkedIn
           </a>
           <a
-            href="#"
+            href="/resume.pdf"
+            target="_blank"
             className="text-gray-300 hover:text-[#6D14FF] transition-colors roboto-mono"
           >
             Resume
           </a>
           <a
             href="https://github.com/CarlosCardenas24"
+            target="_blank"
             className="text-gray-300 hover:text-[#6D14FF] transition-colors roboto-mono"
           >
             GitHub

@@ -39,9 +39,9 @@ const ContactForm: React.FC = () => {
   return isDesktop ? (
     <div
       id={"contact"}
-      className="py-12 flex justify-center bg-gradient-to-b from-[#6D14FF] to-black pl-[80px]"
+      className=" flex justify-center bg-gradient-to-b from-[#6D14FF] to-black pl-[80px] relative"
     >
-      <div className="container max-w-7xl mx-auto flex flex-row items-center justify-center">
+      <div className="py-12 container max-w-7xl mx-auto flex flex-row items-center justify-center">
         <div className="w-1/2 pr-8">
           <div className="border border-white max-w-xl p-10">
             <h3 className="text-3xl font-bold text-white mb-8">Contact Me</h3>
@@ -75,13 +75,13 @@ const ContactForm: React.FC = () => {
                 Send Message
               </button>
             </form>
-            <span className="text-[15px] roboto-mono">{result}</span>
+            <div className="text-[15px] mt-4 roboto-mono">{result}</div>
           </div>
         </div>
       </div>
 
       <div
-        className={`max-w-[500px] max-h-[600px] absolute right-0 
+        className={`max-w-[500px] max-h-[600px] absolute right-0 bottom-0
         transition-all duration-1000 ease-in-out ${
           imageLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
         }`}
@@ -132,7 +132,7 @@ const ContactForm: React.FC = () => {
             Send Message
           </button>
         </form>
-        <span className="text-[15px] roboto-mono">{result}</span>
+        <div className="text-[15px] mt-4 roboto-mono">{result}</div>
       </div>
     </div>
   );

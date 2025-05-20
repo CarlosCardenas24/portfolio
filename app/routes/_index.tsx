@@ -14,9 +14,12 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const paragraph =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-  const recommendation =
-    '"I highly recommend Carlos Cardenas for any software development project. He is a true professional and a pleasure to work with."';
+    "I'm a full-stack developer with a strong focus on JavaScript and React. I enjoy building scalable web applications, integrating APIs, and writing clean, maintainable code that improves performance and user experience.";
+  const recommendations = [
+    '"I highly recommend Carlos Cardenas for any software development project. He is a true professional and a pleasure to work with."',
+    '"Carlos Cardenas consistently delivers high quality code and approaches every project with focus, reliability, and a strong work ethic."',
+    '"Working with Carlos was a great experience—he\'s collaborative, quick to solve problems, and always ready to learn something new."',
+  ];
   const isDesktop = useMediaQuery({ minWidth: 750 });
   return (
     <div>
@@ -25,7 +28,7 @@ export default function Index() {
       )}
       <Hero resources={resources} />
       <Introduction paragraph={paragraph} />
-      <Projects recommendation={recommendation} />
+      <Projects recommendations={recommendations} />
       <ContactForm />
     </div>
   );

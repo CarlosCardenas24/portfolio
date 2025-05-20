@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ProjectsProps {
-  recommendation: string;
+  recommendations: string[];
 }
 
-const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
+const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
   const isDesktop = useMediaQuery({ minWidth: 750 });
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % recommendations.length);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [recommendations.length]);
 
   return isDesktop ? (
     <div
@@ -26,10 +36,19 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               </div>
               <div className="flex flex-col justify-center gap-1"></div>
             </div>
-            <div className="max-w-md">
-              <p className="text-[18px] text-white max-w-md roboto-mono">
-                {recommendation}
-              </p>
+            <div className="max-w-md relative h-[100px] w-[550px]">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={currentIndex}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-[18px] text-white max-w-md roboto-mono absolute"
+                >
+                  {recommendations[currentIndex]}
+                </motion.p>
+              </AnimatePresence>
             </div>
           </div>
 
@@ -38,6 +57,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               <div className="col-start-5 col-span-2 row-start-1 flex justify-center items-center">
                 <a
                   href="https://apps.shopify.com/wishify"
+                  target="_blank"
                   className="text-[20px] hover:underline whitespace-nowrap p-[20px] block font-light roboto-mono"
                 >
                   Shopify Theme App Extension
@@ -46,6 +66,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               <div className="col-start-1 row-start-3 flex items-center justify-center -rotate-90">
                 <a
                   href="https://ccwebarch.com/"
+                  target="_blank"
                   className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
                 >
                   Landing Page
@@ -68,6 +89,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
               <div className="col-start-10 row-start-3 flex items-center justify-center rotate-90">
                 <a
                   href="https://shopping-cart-poc-app.netlify.app/"
+                  target="_blank"
                   className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
                 >
                   Shopping Cart
@@ -104,10 +126,19 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
           <span className="text-white roboto-mono">Software Developer</span>
         </div>
       </div>
-      <div className="pb-2">
-        <p className="text-[18px] text-white w-[248px] roboto-mono">
-          {recommendation}
-        </p>
+      <div className="pb-2 w-[275px] relative h-[120px]">
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={currentIndex}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5 }}
+            className="text-[18px] text-white roboto-mono absolute"
+          >
+            {recommendations[currentIndex]}
+          </motion.p>
+        </AnimatePresence>
       </div>
       <div className="pb-2">
         <div
@@ -119,6 +150,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
             <div className="text-center">
               <a
                 href="https://apps.shopify.com/wishify"
+                target="_blank"
                 className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
               >
                 Shopify Theme App Extension
@@ -127,6 +159,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
             <div className="text-center">
               <a
                 href="https://ccwebarch.com/"
+                target="_blank"
                 className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
               >
                 Landing Page
@@ -135,6 +168,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendation }) => {
             <div className="text-center">
               <a
                 href="https://shopping-cart-poc-app.netlify.app/"
+                target="_blank"
                 className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
               >
                 Shopping Cart

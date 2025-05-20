@@ -4,7 +4,7 @@ import { useMediaQuery } from "react-responsive";
 export default function Footer() {
   const isDesktop = useMediaQuery({ minWidth: 750 });
   return isDesktop ? (
-    <footer className="py-10 mt-16 border-t border-gray-800">
+    <footer className="py-10 border-t border-gray-800">
       <div className="container mx-auto pl-[5.5rem] pr-[5.5rem] max-w-7xl">
         <div className="flex flex-row justify-between">
           <div className="w-1/2 flex flex-row">
@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
           <div className="w-1/2"></div>
         </div>
-        <div className="w-full h-[1px] bg-white mt-2 mb-6"></div>
+        <div className="w-full h-[2px] bg-white mt-2 mb-6"></div>
 
         <div className="flex flex-row justify-between">
           <div className="w-1/2 flex flex-row">
@@ -56,24 +56,28 @@ export default function Footer() {
               <div className="flex flex-col space-y-4 mt-3 mb-6">
                 <a
                   href="https://apps.shopify.com/wishify"
+                  target="_blank"
                   className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   Shopify Theme App Extension
                 </a>
                 <a
                   href="https://ccwebarch.com/"
+                  target="_blank"
                   className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   Landing Page
                 </a>
                 <a
                   href="https://shopping-cart-poc-app.netlify.app/"
+                  target="_blank"
                   className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   Shopping Cart
                 </a>
                 {/* <a
                   href="#"
+                  target="_blank"
                   className="text-gray-300 hover:text-white transition-colors roboto-mono"
                 >
                   AI Image Diffusion / Story Board
