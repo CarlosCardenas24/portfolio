@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ resources }) => {
-  const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isDesktop = useMediaQuery({ minWidth: 1350 });
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -101,8 +101,9 @@ const Hero: React.FC<HeroProps> = ({ resources }) => {
   ) : (
     <div
       id={"hero"}
-      className="flex flex-col items-center justify-between gap-4"
+      className="flex flex-col items-center justify-between gap-4 relative"
     >
+      <div className="absolute bottom-0 left-0 right-0 h-[35px] bg-[#FAFAFA] z-0"></div>
       <div className="flex justify-center">
         {resources.map((resource: Resource, index: number) => (
           <React.Fragment key={index}>{resource.icon}</React.Fragment>
@@ -114,8 +115,12 @@ const Hero: React.FC<HeroProps> = ({ resources }) => {
           your service
         </h1>
       </div>
-      <div className="bg-black">
-        <img src="/anime-coder-girl.png" alt="Resource Icon" />
+      <div className="w-full z-10 flex justify-end">
+        <img
+          className="max-w-[430px]"
+          src="/anime-coder-girl.png"
+          alt="Resource Icon"
+        />
       </div>
     </div>
   );

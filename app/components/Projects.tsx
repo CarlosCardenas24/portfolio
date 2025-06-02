@@ -7,7 +7,7 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
-  const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isDesktop = useMediaQuery({ minWidth: 1350 });
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

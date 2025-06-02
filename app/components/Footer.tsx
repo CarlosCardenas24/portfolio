@@ -2,7 +2,7 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Footer() {
-  const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isDesktop = useMediaQuery({ minWidth: 1350 });
   return isDesktop ? (
     <footer className="py-10 border-t border-gray-800">
       <div className="container mx-auto pl-[5.5rem] pr-[5.5rem] max-w-7xl">
@@ -105,7 +105,7 @@ export default function Footer() {
   ) : (
     <footer className="py-6 mt-12 border-t border-gray-800">
       <div className="container mx-auto px-4">
-        <div>
+        <div className="text-center">
           <h3 className="text-xl font-bold text-white roboto-mono">Connect:</h3>
           <div className="flex flex-col space-y-4 mt-3 mb-6">
             <a
@@ -133,7 +133,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div>
+        <div className="text-center">
           <h3 className="text-xl font-bold text-white roboto-mono">Projects</h3>
           <div className="flex flex-col space-y-4 mt-3 mb-6">
             <a

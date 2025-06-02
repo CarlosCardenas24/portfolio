@@ -20,7 +20,7 @@ export default function Index() {
     '"Carlos Cardenas consistently delivers high quality code and approaches every project with focus, reliability, and a strong work ethic."',
     '"Working with Carlos was a great experience—he\'s collaborative, quick to solve problems, and always ready to learn something new."',
   ];
-  const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isDesktop = useMediaQuery({ minWidth: 1350 });
   return (
     <div>
       {isDesktop && (

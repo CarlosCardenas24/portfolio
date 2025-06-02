@@ -10,7 +10,7 @@ interface IntroductionProps {
 }
 
 const Introduction: React.FC<IntroductionProps> = ({ paragraph }) => {
-  const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isDesktop = useMediaQuery({ minWidth: 1350 });
   return isDesktop ? (
     <div id={"introduction"} className="bg-[#FAFAFA] flex flex-col w-full">
       <div className="w-full flex justify-center">

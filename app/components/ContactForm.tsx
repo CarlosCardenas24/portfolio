@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const ContactForm: React.FC = () => {
-  const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isDesktop = useMediaQuery({ minWidth: 1350 });
   const [imageLoaded, setImageLoaded] = useState(false);
   const [result, setResult] = useState("");
 
