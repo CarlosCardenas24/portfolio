@@ -7,8 +7,8 @@ import { useMediaQuery } from "react-responsive";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Carlos's Portfolio" },
+    { name: "description", content: "Portfolio of Carlos Cardenas" },
   ];
 };
 
