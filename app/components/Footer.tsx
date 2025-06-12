@@ -2,7 +2,7 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Footer() {
-  const isDesktop = useMediaQuery({ minWidth: 1350 });
+  const isDesktop = useMediaQuery({ minWidth: 750 });
   return isDesktop ? (
     <footer className="py-10 border-t border-gray-800">
       <div className="container mx-auto pl-[5.5rem] pr-[5.5rem] max-w-7xl">

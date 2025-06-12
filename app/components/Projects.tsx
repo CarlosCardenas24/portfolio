@@ -7,7 +7,7 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1350 });
+  const isDesktop = useMediaQuery({ minWidth: 750 });
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -82,7 +82,10 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
               </div>
 
               <div className="col-start-5 col-span-2 row-start-2 row-span-3 absolute inset-0 flex items-center justify-center">
-                <h3 className="text-[100px] text-white z-10 rock-3d-regular">
+                <h3
+                  className="text-white z-10 rock-3d-regular"
+                  style={{ fontSize: "clamp(60px, 10vw, 100px)" }}
+                >
                   Projects
                 </h3>
               </div>

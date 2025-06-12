@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const ContactForm: React.FC = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1350 });
+  const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isDesktopImg = useMediaQuery({ minWidth: 1350 });
   const [imageLoaded, setImageLoaded] = useState(false);
   const [result, setResult] = useState("");
 
@@ -80,18 +81,20 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
 
-      <div
-        className={`max-w-[500px] max-h-[600px] absolute right-0 bottom-0
+      {isDesktopImg ? (
+        <div
+          className={`max-w-[500px] max-h-[600px] absolute right-0 bottom-0
         transition-all duration-1000 ease-in-out ${
           imageLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
         }`}
-      >
-        <img
-          src="/pretty-anime-girl-saying-goodbye.png"
-          alt="Anime Girl Waving Goodbye"
-          className="h-full object-cover"
-        />
-      </div>
+        >
+          <img
+            src="/pretty-anime-girl-saying-goodbye.png"
+            alt="Anime Girl Waving Goodbye"
+            className="h-full object-cover"
+          />
+        </div>
+      ) : null}
     </div>
   ) : (
     <div

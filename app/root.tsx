@@ -26,7 +26,7 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const isMobile = useMediaQuery({ maxWidth: 1350 });
+  const isMobile = useMediaQuery({ maxWidth: 750 });
   return (
     <html lang="en">
       <head>
@@ -40,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <Footer />
         {isMobile ? (
-          <div className="flex justify-end mt-4">
+          <div className="flex mt-4 justify-center">
             <img
               src="/pretty-anime-girl-saying-goodbye.png"
               alt="Anime coder girl"

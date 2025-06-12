@@ -2,7 +2,7 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 
 const NavigationBar: React.FC = () => {
-  const isMobile = useMediaQuery({ maxWidth: 1349 });
+  const isMobile = useMediaQuery({ maxWidth: 750 });
 
   // Only render the navigation bar for mobile views
   if (!isMobile) return null;

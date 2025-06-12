@@ -10,7 +10,8 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ resources }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1350 });
+  const isDesktop = useMediaQuery({ minWidth: 750 });
+  const isDesktopImg = useMediaQuery({ minWidth: 1350 });
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -73,29 +74,41 @@ const Hero: React.FC<HeroProps> = ({ resources }) => {
               </a>
             </div>
           </div>
-          <div className="flex justify-center absolute left-[45%] top-[30%] transform -translate-x-1/2 ">
-            {resources.map((resource: Resource, index: number) => (
-              <React.Fragment key={index}>{resource.icon}</React.Fragment>
-            ))}
-          </div>
-          <div className="bg-black max-w-[500px] opacity-0">
-            <img src="/anime-coder-girl.png" alt="Resource Icon" />
-          </div>
+          {isDesktopImg ? (
+            <div className="flex justify-end absolute left-[45%] top-[30%] transform -translate-x-1/2 ">
+              {resources.map((resource: Resource, index: number) => (
+                <React.Fragment key={index}>{resource.icon}</React.Fragment>
+              ))}
+            </div>
+          ) : (
+            <div className="flex justify-center absolute right-0 top-[30%] transform -translate-x-1/2 ">
+              {resources.map((resource: Resource, index: number) => (
+                <React.Fragment key={index}>{resource.icon}</React.Fragment>
+              ))}
+            </div>
+          )}
+          {isDesktopImg ? (
+            <div className="bg-black max-w-[500px] opacity-0">
+              <img src="/anime-coder-girl.png" alt="Resource Icon" />
+            </div>
+          ) : null}
         </div>
 
-        <div
-          className={`max-w-[500px] h-full absolute right-0 top-0 transition-all duration-1000 ease-in-out ${
-            imageLoaded
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 translate-x-10"
-          }`}
-        >
-          <img
-            src="/anime-coder-girl.png"
-            alt="Resource Icon"
-            className="h-full object-cover"
-          />
-        </div>
+        {isDesktopImg ? (
+          <div
+            className={`max-w-[500px] h-full absolute right-0 top-0 transition-all duration-1000 ease-in-out ${
+              imageLoaded
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-10"
+            }`}
+          >
+            <img
+              src="/anime-coder-girl.png"
+              alt="Resource Icon"
+              className="h-full object-cover"
+            />
+          </div>
+        ) : null}
       </div>
     </div>
   ) : (
@@ -115,7 +128,7 @@ const Hero: React.FC<HeroProps> = ({ resources }) => {
           your service
         </h1>
       </div>
-      <div className="w-full z-10 flex justify-end">
+      <div className="w-full z-10 flex justify-center">
         <img
           className="max-w-[430px]"
           src="/anime-coder-girl.png"
