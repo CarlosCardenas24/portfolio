@@ -58,7 +58,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
                 <a
                   href="https://apps.shopify.com/wishify"
                   target="_blank"
-                  className="text-[20px] hover:underline whitespace-nowrap p-[20px] block font-light roboto-mono"
+                  className="text-[20px] text-white hover:underline whitespace-nowrap p-[20px] block font-light roboto-mono"
                 >
                   Shopify Theme App Extension
                 </a>
@@ -67,7 +67,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
                 <a
                   href="https://ccwebarch.com/"
                   target="_blank"
-                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
+                  className="text-[20px] text-white hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
                 >
                   Landing Page
                 </a>
@@ -93,7 +93,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
                 <a
                   href="https://shopping-cart-poc-app.netlify.app/"
                   target="_blank"
-                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
+                  className="text-[20px] text-white hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
                 >
                   Shopping Cart
                 </a>
@@ -101,7 +101,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
               {/* <div className="col-start-5 col-span-2 row-start-5 flex justify-center items-center">
                 <a
                   href="#"
-                  className="text-[20px] hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
+                  className="text-[20px] text-white hover:underline p-[20px] whitespace-nowrap block font-light roboto-mono"
                 >
                   AI Image Diffusion / Story Board
                 </a>
@@ -154,7 +154,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
               <a
                 href="https://apps.shopify.com/wishify"
                 target="_blank"
-                className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
+                className="text-[20px] text-white hover:underline p-[20px] inline-block roboto-mono"
               >
                 Shopify Theme App Extension
               </a>
@@ -163,7 +163,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
               <a
                 href="https://ccwebarch.com/"
                 target="_blank"
-                className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
+                className="text-[20px] text-white hover:underline p-[20px] inline-block roboto-mono"
               >
                 Landing Page
               </a>
@@ -172,7 +172,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
               <a
                 href="https://shopping-cart-poc-app.netlify.app/"
                 target="_blank"
-                className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
+                className="text-[20px] text-white hover:underline p-[20px] inline-block roboto-mono"
               >
                 Shopping Cart
               </a>
@@ -180,7 +180,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
             {/* <div className="text-center">
               <a
                 href="#"
-                className="text-[20px] hover:underline p-[20px] inline-block roboto-mono"
+                className="text-[20px] text-white hover:underline p-[20px] inline-block roboto-mono"
               >
                 AI Image Diffusion / Story Board
               </a>
