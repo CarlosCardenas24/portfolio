@@ -148,7 +148,7 @@ const Projects: React.FC<ProjectsProps> = ({ recommendations }) => {
           className="bg-[url('/leopard-bg.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center w-[80%] h-[650px] mx-auto my-20
         "
         >
-          <h3 className="text-[55px] rock-3d-regular">Projects</h3>
+          <h3 className="text-[55px] text-white rock-3d-regular">Projects</h3>
           <div className="flex flex-col justify-between h-[80%] w-full">
             <div className="text-center">
               <a
