@@ -76,7 +76,9 @@ const ContactForm: React.FC = () => {
                 Send Message
               </button>
             </form>
-            <div className="text-[15px] mt-4 roboto-mono">{result}</div>
+            <div className="text-[15px] text-white mt-4 roboto-mono">
+              {result}
+            </div>
           </div>
         </div>
       </div>
@@ -135,7 +137,7 @@ const ContactForm: React.FC = () => {
             Send Message
           </button>
         </form>
-        <div className="text-[15px] mt-4 roboto-mono">{result}</div>
+        <div className="text-[15px] text-white mt-4 roboto-mono">{result}</div>
       </div>
     </div>
   );
